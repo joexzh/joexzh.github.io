@@ -3,7 +3,7 @@ menu:
   Home: /
   Archives: /archives
   About: /about/me
-rss: /atom.xml
+rss: /rss2.xml
 banner: images/512679.jpg
 subtitle: Time waits for no one.
 

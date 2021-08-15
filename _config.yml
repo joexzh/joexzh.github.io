@@ -94,8 +94,6 @@ pagination_dir: page
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
 include:
-  - favicon.ico
-  - "images/*"
 exclude:
 ignore:
 
@@ -110,3 +108,18 @@ deploy:
   type: ''
 
 disqus_shortname: xiezhenhao-github-com-blog
+
+# hexo-generator-feed
+feed:
+  enable: true
+  type: rss2
+  path: rss2.xml
+  limit: 40
+  hub:
+  content:
+  content_limit: 1000
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:
