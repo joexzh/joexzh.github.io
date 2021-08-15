@@ -1,6 +1,7 @@
 ---
 title: 初学 Kubernetes
 tags: kubernetes
+excerpt: 个人kubernetes初学笔记, 跟着 https://kubernetes.io/docs/tutorials/ 走一遍.
 categories:
   - coding
   - kubernetes 学习笔记
