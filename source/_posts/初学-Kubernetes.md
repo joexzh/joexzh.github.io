@@ -45,11 +45,11 @@ http://192.168.23.150:8080/api/v1/namespaces/kubernetes-dashboard/services/http:
 
 查看 deploy:
 
-    $ kubectl get deployments
+    kubectl get deployments
 
 结果类似
 
-    NAME                READY   UP-TO-DATE   AVAILABLE   AGE
+    NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
     kubernetes-bootcamp   1/1     1            1           1m
 
 #### 创建 service:
@@ -64,7 +64,7 @@ http://192.168.23.150:8080/api/v1/namespaces/kubernetes-dashboard/services/http:
 - LoadBalancer: 外部可以通过一个负载平衡服务分配的 ip 访问
 - ExternalName: 映射到 `externalName` 字段 (e.g. `foo.bar.example.com`), 返回 `CNAME` 记录, 不需要 proxy. 需要 `kube-dns` v1.7+, 或 CoreDNS v0.0.8+
 
-依次是包含关系, LoadBalancer > NodePort > ClusterIP,
+前 3 者依次是包含关系, LoadBalancer > NodePort > ClusterIP,
 
 
 #### 查看 service
@@ -133,9 +133,9 @@ Kubernetes 通过监控资源的使用情况, 自动伸缩, 以后会学习到.
 
 使用 Rolling updates 实现 0 停机时间热更新. 更新的 pod 会自动调度到有资源的 node.
 
-在更新中, 默认最大不可用 pod 数量是 1, 默认同时最大更新数量是1, 可以通过设置 pod 数量百分比调整.
+在更新过程中, 默认最大不可用 pod 数量是 1, 默认同时最大更新数量是1, 可以通过设置 pod 数量百分比调整.
 
-而且更新都是有版本控制的, 随时可以回滚上上一个版本.
+更新都是有版本控制的, 随时可以回滚上上一个版本.
 
 执行命令更新 image:
 
