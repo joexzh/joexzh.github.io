@@ -1,15 +1,11 @@
 ---
-layout:     post
 title:      "写 typescript-backbone-router-demo 时遇到的坑"
-subtitle:   "traps-when-building-the-typescript-backbone-router-demo"
-date:       2017-07-16 19:00:00
-author:     "Joe"
+date:       2017-07-16T19:00:00+08:00
+draft:      false
 tags:
     - typescript
     - webpack
     - js
-categories:
-    - [coding]
 ---
 
 项目地址: [typescript-backbone-router-demo](https://github.com/joexzh/typescript-backbone-router-demo)

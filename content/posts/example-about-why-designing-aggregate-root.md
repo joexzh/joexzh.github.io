@@ -1,13 +1,10 @@
 ---
-layout:     post
 title:      "几个例子说明为什么要设计 aggregate root"
-subtitle:   "about aggregate"
-date:       2017-04-16 01:00:00
-author:     "Joe"
+date:       2017-04-16T01:00:00+08:00
+draft:      false
 tags:
     - DDD
-categories:
-    - [coding]
+    - se
 ---
 
 设计 aggregate root 目的是通过 root 修改 aggregate, 也就是提供有限的入口修改 aggregate, 而不是把 aggregate 泄露得遍地都是. 这样做是为了更加贴近现实世界, 并且减少设计的复杂度以节省我们的生命.

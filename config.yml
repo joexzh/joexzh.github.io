@@ -1,0 +1,24 @@
+baseURL: "https://joexzh.github.io/"
+title: joexzh' blog
+paginate: 5
+theme: PaperMod
+
+enableRobotsTXT: true
+enableInlineShortcodes: true
+enableEmoji: true
+pygmentsUseClasses: true
+
+menu:
+  main:
+    - identifier: tags
+      name: Tags
+      url: tags/
+      weight: 1
+    - identifier: archives
+      name: Archives
+      url: archives/
+      weight: 2
+    - identifier: rss
+      name: Rss
+      url: index.xml
+      weight: 3

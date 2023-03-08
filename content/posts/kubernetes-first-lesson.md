@@ -1,11 +1,8 @@
 ---
-title: 初学 Kubernetes
-tags: kubernetes
-excerpt: 个人kubernetes初学笔记, 跟着 https://kubernetes.io/docs/tutorials/ 走一遍.
-categories:
-  - coding
-  - kubernetes 学习笔记
-date: 2021-08-15 20:48:54
+title:  初学 Kubernetes
+date:   2021-08-15T20:48:54+08:00
+draft:  false
+tags: [kubernetes, se]
 ---
 
 
@@ -30,16 +27,15 @@ Starting to serve on [::]:8080
 
 例如:
 
-http://192.168.23.150:8080/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy
+<http://192.168.23.150:8080/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy>
 
-![屏幕截图](/asset/初学-Kubernetes/185416.png)
+[![screenshot](185416.png)](185416.png)
 
 ### 2. 使用 kubectl 命令
 
-#### 创建一个 deployment:
+#### 创建一个 deployment
 
     kubectl create deployment kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1
-
 
 国内可能会下载镜像失败, 可以考虑用阿里云的镜像.
 
@@ -52,13 +48,12 @@ http://192.168.23.150:8080/api/v1/namespaces/kubernetes-dashboard/services/http:
     NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
     kubernetes-bootcamp   1/1     1            1           1m
 
-#### 创建 service:
-
+#### 创建 service
 
     kubectl expose deployment/kubernetes-bootcamp --type="LoadBalancer" --port 8080
 
-
 `--type` 有 4 种:
+
 - ClusterIP: 只有集群内部可以访问
 - NodePort: 外部可以通过 Node ip 和暴露的 port 访问
 - LoadBalancer: 外部可以通过一个负载平衡服务分配的 ip 访问
@@ -66,18 +61,17 @@ http://192.168.23.150:8080/api/v1/namespaces/kubernetes-dashboard/services/http:
 
 前 3 者依次是包含关系, LoadBalancer > NodePort > ClusterIP,
 
-
 #### 查看 service
 
     kubectl get service [option: name] [option: -l label] [option: -n namespace]
 
-#### 查看 pod:
+#### 查看 pod
 
     kubectl get pods [option]
 
 一般一个 pod 对应一个容器 app, 除非一组 app 有非常紧密的联系, 资源和 log 都共用, 才会将一组容器 app 定义成一个 pod.
- 
-#### 查看 nodes:
+
+#### 查看 nodes
 
     kubectl get nodes [option]
 
@@ -104,7 +98,7 @@ http://192.168.23.150:8080/api/v1/namespaces/kubernetes-dashboard/services/http:
 Kubernetes 通过监控资源的使用情况, 自动伸缩, 以后会学习到.
 
  查看 replicaSets:
-    
+
     kubectl get rs
 
 执行命令增加 replicas, 从 1 个增加到 4 个:
