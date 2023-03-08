@@ -1,6 +1,6 @@
 baseURL: "https://joexzh.github.io/"
 title: joexzh' blog
-paginate: 5
+paginate: 10
 theme: PaperMod
 googleAnalytics: G-QELQFMPVPN
 
