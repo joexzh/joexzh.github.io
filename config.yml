@@ -8,6 +8,7 @@ enableRobotsTXT: true
 enableInlineShortcodes: true
 enableEmoji: true
 pygmentsUseClasses: true
+hasCJKLanguage: true
 
 menu:
   main:
