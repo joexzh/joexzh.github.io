@@ -1,5 +1,5 @@
 ---
-title: "Clangd, Cmake and Vscode first glance - solved some configuration errors"
+title: "Clangd, CMake and VSCode first glance - solved some configuration errors"
 date: 2023-03-09T11:50:22+08:00
 draft: false
 tags:
